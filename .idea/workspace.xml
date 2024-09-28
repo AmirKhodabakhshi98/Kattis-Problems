@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Search1/CandyDivision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Search1/Euclid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Search2/Porto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Search2/PortoStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Search3/Eko.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE388/SearchHarder/Colorland.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/W1/DynamicGreedy/Help2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.PortoStatic">
+  <component name="RunManager" selected="Application.Knapsack">
     <configuration name="Colorland" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE388.SearchHarder.Colorland" />
       <module name="Kattis-Problems" />
@@ -77,6 +70,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ETE388.Search3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.Knapsack" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE388.Dynamic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,6 +118,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Knapsack" />
         <item itemvalue="Application.PortoStatic" />
         <item itemvalue="Application.Porto" />
         <item itemvalue="Application.Colorland" />
@@ -135,6 +142,7 @@
       <workItem from="1727287737774" duration="36108000" />
       <workItem from="1727345046758" duration="1390000" />
       <workItem from="1727346520037" duration="2743000" />
+      <workItem from="1727501262896" duration="10425000" />
     </task>
     <servers />
   </component>
@@ -153,6 +161,19 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java</url>
+          <line>32</line>
+          <properties class="ETE388.Dynamic.Knapsack" method="solve">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="letterValue" language="JAVA" />
