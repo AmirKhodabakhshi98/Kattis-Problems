@@ -53,7 +53,7 @@ public class Knapsack {
             return;
         }
 
-        while (i>=1 && j>=0){
+        while (i>=1){
 
             Item item = items[i - 1];
 
@@ -62,9 +62,8 @@ public class Knapsack {
                //System.out.print(i-1 + " ");
                j-=item.weight;
                indexes.add(i-1);
-           }else {
-               j--;
            }
+           //else {j--;}
            i--;
 
        }
@@ -84,7 +83,7 @@ public class Knapsack {
 
 
     public static void main(String[] args) throws IOException {
-/*
+
         Kattio io = new Kattio(System.in, System.out);
 
         while (true){
@@ -108,9 +107,9 @@ public class Knapsack {
 
         io.close();
 
-        */
 
 
+/*
         //test stuff
        // for (int x=  0; x<1000; x++) {
        // while (true){
@@ -123,7 +122,7 @@ public class Knapsack {
             }
         new Knapsack(capacity,items);
    //     }
-
+*/
 
     }
 }

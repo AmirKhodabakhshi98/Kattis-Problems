@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ETE389/Kattio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ETE389/MST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ETE389/SSP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,35 +55,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Knapsack">
-    <configuration name="Colorland" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.SearchHarder.Colorland" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE388.SearchHarder.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Eko" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.Search3.Eko" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE388.Search3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.Knapsack" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ETE389" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MST">
+    <configuration name="Ecoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.Ecoin" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
         <pattern>
@@ -90,12 +74,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Porto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.Search2.Porto" />
+    <configuration name="Ls" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.Ls" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ETE388.Search2.*" />
+          <option name="PATTERN" value="ETE388.Dynamic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +87,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PortoStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.Search2.PortoStatic" />
+    <configuration name="MST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.MST" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ETE388.Search2.*" />
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SSP (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.SSP" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SSP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.SSP" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Knapsack" />
-        <item itemvalue="Application.PortoStatic" />
-        <item itemvalue="Application.Porto" />
-        <item itemvalue="Application.Colorland" />
-        <item itemvalue="Application.Eko" />
+        <item itemvalue="Application.MST" />
+        <item itemvalue="Application.SSP" />
+        <item itemvalue="Application.SSP (1)" />
+        <item itemvalue="Application.Ecoin" />
+        <item itemvalue="Application.Ls" />
       </list>
     </recent_temporary>
   </component>
@@ -143,6 +153,9 @@
       <workItem from="1727345046758" duration="1390000" />
       <workItem from="1727346520037" duration="2743000" />
       <workItem from="1727501262896" duration="10425000" />
+      <workItem from="1727561323889" duration="8931000" />
+      <workItem from="1727674842662" duration="7135000" />
+      <workItem from="1727692290594" duration="21056000" />
     </task>
     <servers />
   </component>
@@ -172,12 +185,37 @@
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
+          <line>96</line>
+          <properties class="ETE389.MST">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE389/SSP.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="letterValue" language="JAVA" />
         <watch expression="sumValue" />
+        <watch expression="arr[s.length]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
