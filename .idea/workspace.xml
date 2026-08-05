@@ -45,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BlockCrusher.executor": "Run",
+    "Application.BlockCrusherNodes.executor": "Run",
     "Application.Ecoin.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.PortoStatic.executor": "Run",
@@ -74,9 +75,22 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BlockCrusher">
+  <component name="RunManager" selected="Application.BlockCrusherNodes">
     <configuration name="BlockCrusher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE389.BlockCrusher" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlockCrusherNodes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.BlockCrusherNodes" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
         <pattern>
@@ -127,26 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SSP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE389.SSP" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE389.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BlockCrusherNodes" />
         <item itemvalue="Application.BlockCrusher" />
         <item itemvalue="Application.Ecoin" />
         <item itemvalue="Application.Ljutna" />
         <item itemvalue="Application.PortoStatic" />
-        <item itemvalue="Application.SSP" />
       </list>
     </recent_temporary>
   </component>
@@ -222,11 +223,6 @@
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
           <line>94</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE389/BlockCrusher.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
