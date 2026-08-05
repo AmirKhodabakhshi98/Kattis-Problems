@@ -1,8 +1,8 @@
-package ETE389; /** Simple yet moderately fast I/O routines.
+package Kattis; /** Simple yet moderately fast I/O routines.
  *
  * Example usage:
  *
- * Kattio io = new Kattio(System.in, System.out);
+ * Kattis.Kattio io = new Kattis.Kattio(System.in, System.out);
  *
  * while (io.hasMoreTokens()) {
  *    int n = io.getInt();
@@ -18,7 +18,7 @@ package ETE389; /** Simple yet moderately fast I/O routines.
  * Some notes:
  *
  * - When done, you should always do io.close() or io.flush() on the
- *   Kattio-instance, otherwise, you may lose output.
+ *   Kattis.Kattio-instance, otherwise, you may lose output.
  *
  * - The getInt(), getDouble(), and getLong() methods will throw an
  *   exception if there is no more data in the input, so it is generally
@@ -27,10 +27,19 @@ package ETE389; /** Simple yet moderately fast I/O routines.
  * @author: Kattis
  */
 
+
 import java.io.*;
 import java.util.StringTokenizer;
 
 public class Kattio extends PrintWriter {
+
+    //default initialization to system.in/out so I don't have to type it in each time
+    //Added by Amir Khodabakhshi 5/feb-2025
+    public Kattio(){
+        super(new BufferedOutputStream(System.out));
+        r = new BufferedReader(new InputStreamReader(System.in));
+    }
+
     public Kattio(InputStream i) {
         super(new BufferedOutputStream(System.out));
         r = new BufferedReader(new InputStreamReader(i));
@@ -38,6 +47,28 @@ public class Kattio extends PrintWriter {
     public Kattio(InputStream i, OutputStream o) {
         super(new BufferedOutputStream(o));
         r = new BufferedReader(new InputStreamReader(i));
+    }
+
+    //Added 4/apr-25 //Amir
+    //gets full line, maybe one of the other methods already does it idk
+    public String getLine() {
+        try {
+
+            return r.readLine();
+        } catch (IOException e) { }
+        return null;
+    }
+
+    //Added 11/07-2023 // Amir Khodabakhshi
+    //Fixes a bug where input size is uncertain
+    public boolean ready() {
+        try {
+            if (r.ready()){
+                return true;
+            }
+        }catch (IOException e){}
+
+        return false;
     }
 
     public boolean hasMoreTokens() {
@@ -62,22 +93,10 @@ public class Kattio extends PrintWriter {
 
 
 
-
-
     private BufferedReader r;
     private String line;
     private StringTokenizer st;
     private String token;
-
-    public boolean ready() { //Added 11/07-2023 fixes a bug when input size is uncertain // Amir Khodabakhshi
-        try {
-        if (r.ready()){
-            return true;
-        }
-        }catch (IOException e){}
-
-        return false;
-    }
 
     private String peekToken() {
         if (token == null)
