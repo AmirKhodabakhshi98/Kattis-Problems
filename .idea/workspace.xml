@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE389/Kattio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE389/MST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ETE389/SSP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Kattio.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Search1/CandyDivision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search1/CandyDivision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Search1/Euclid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search1/Euclid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Search2/Porto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search2/Porto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Search2/PortoStatic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search2/PortoStatic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Search3/Eko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search3/Eko.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/SearchHarder/Colorland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/SearchHarder/Colorland.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE389/BlockCrusherNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/BlockCrusherNodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE389/Kattio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE389/MST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/MST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE389/SSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/SSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenericClasses/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenericClasses/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenericClasses/GraphSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenericClasses/GraphSimple.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +56,21 @@
   "keyToString": {
     "Application.BlockCrusher.executor": "Run",
     "Application.BlockCrusherNodes.executor": "Run",
+    "Application.ChopWood (1).executor": "Run",
+    "Application.ChopWood.executor": "Run",
+    "Application.Ecoin (1).executor": "Run",
     "Application.Ecoin.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.PortoStatic.executor": "Run",
     "Application.SSP.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/A/Documents/GitHub/Kattis-Problems/src/TDDD95",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,7 +92,7 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BlockCrusherNodes">
+  <component name="RunManager" selected="Application.ChopWood (1)">
     <configuration name="BlockCrusher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE389.BlockCrusher" />
       <module name="Kattis-Problems" />
@@ -102,7 +119,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ecoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ChopWood (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TDDD95.DataStructures.ChopWood" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TDDD95.DataStructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChopWood" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TDDD95.DataStructures.ChopWood" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TDDD95.DataStructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ecoin (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.Ecoin" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
@@ -115,41 +158,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ljutna" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TDDD95.GreedyDynamic1.Ljutna" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TDDD95.GreedyDynamic1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortoStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.Search2.PortoStatic" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE388.Search2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChopWood (1)" />
+        <item itemvalue="Application.ChopWood" />
+        <item itemvalue="Application.Ecoin (1)" />
         <item itemvalue="Application.BlockCrusherNodes" />
         <item itemvalue="Application.BlockCrusher" />
-        <item itemvalue="Application.Ecoin" />
-        <item itemvalue="Application.Ljutna" />
-        <item itemvalue="Application.PortoStatic" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -193,7 +218,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java</url>
-          <line>32</line>
+          <line>34</line>
           <properties class="ETE388.Dynamic.Knapsack" method="solve">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -202,7 +227,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
-          <line>96</line>
+          <line>98</line>
           <properties class="ETE389.MST" method="compare">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -211,17 +236,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE389/SSP.java</url>
-          <line>111</line>
+          <line>113</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
-          <line>72</line>
+          <line>74</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
-          <line>94</line>
+          <line>96</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

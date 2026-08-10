@@ -12,6 +12,8 @@ package GenericClasses;
  **/
 
 import java.util.LinkedList;
+import Kattis.Kattio;
+
 
 public class GraphSimple {
 

@@ -2,6 +2,8 @@ package ETE389;
 
 import java.awt.List;
 import java.util.*;
+import Kattis.Kattio;
+
 
 public class MST {
     PriorityQueue<Edge> edges;

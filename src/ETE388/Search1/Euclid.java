@@ -1,6 +1,8 @@
 package ETE388.Search1;
 
 import java.util.Scanner;
+import Kattis.Kattio;
+
 
 public class Euclid {
 

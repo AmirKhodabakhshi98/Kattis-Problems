@@ -1,4 +1,6 @@
 package ETE388.Dynamic;
+import Kattis.Kattio;
+
 
 public class Ls {
 

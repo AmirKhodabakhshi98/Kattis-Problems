@@ -13,6 +13,8 @@ shortest nbr+path.
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
+import Kattis.Kattio;
+
 
 public class BlockCrusherNodes {
 

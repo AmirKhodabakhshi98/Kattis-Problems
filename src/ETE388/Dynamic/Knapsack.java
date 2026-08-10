@@ -3,6 +3,8 @@ package ETE388.Dynamic;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import Kattis.Kattio;
+
 
 public class Knapsack {
     int capacity;

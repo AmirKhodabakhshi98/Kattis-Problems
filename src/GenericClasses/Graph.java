@@ -16,6 +16,9 @@ package GenericClasses;
  **/
 
 import java.util.*;
+import Kattis.Kattio;
+
+
 public class Graph{
 
 

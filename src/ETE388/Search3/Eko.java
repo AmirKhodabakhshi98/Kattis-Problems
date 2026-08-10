@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.IntStream;
+import Kattis.Kattio;
+
 
 public class Eko {
 
