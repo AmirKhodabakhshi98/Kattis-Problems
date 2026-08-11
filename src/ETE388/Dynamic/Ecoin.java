@@ -6,6 +6,7 @@ import java.util.stream.IntStream;
 
 import Kattis.Kattio;
 
+//till sen: kolla logik decimaler d kan fucka
 
 public class Ecoin {
 
@@ -27,37 +28,36 @@ public class Ecoin {
         Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
 
 
-        int[] ans = recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
-        if (ans!=null){
-            this.ans = (IntStream.of(ans).sum());
+        recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
+        if (minNbrToReach[s] != Integer.MAX_VALUE) {
+            ans = minNbrToReach[s];
         }
 
     }
 
 
     //om för långsam sen när d funkar byt txb till coinsused return nu när d fixat
-    private int[] recursive(int coinsUsed, int[] nbrEachCoin) {
-
+    private void recursive(int coinsUsed, int[] nbrEachCoin) {
+        int[] bestState = null;
 
         int eMod = 0;
         coinsUsed++;
         for (int i = 0; i < coins.length; i++) {
-            nbrEachCoin[i]++;
-            eMod = eModolus(nbrEachCoin);
-            nbrEachCoin[i]--;
+            int[] state = Arrays.copyOf(nbrEachCoin, coins.length);
+            state[i]++;
+            eMod = eModolus(state);
             if (eMod>s || minNbrToReach[eMod]<=coinsUsed){ //om overshoot, eller, sämre väg hit -> cont
                 continue;
             }
-            nbrEachCoin[i]++;
+
             minNbrToReach[eMod] = coinsUsed;
             if (eMod==s){
-                return nbrEachCoin;
+                bestState = state;
+                continue;
             }
-
-            return recursive(coinsUsed,Arrays.copyOf(nbrEachCoin, coins.length));
-
+            recursive(coinsUsed,Arrays.copyOf(state, coins.length));
         }
-        return null;
+
     }
 
 
