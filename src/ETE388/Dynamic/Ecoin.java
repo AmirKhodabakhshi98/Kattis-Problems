@@ -7,6 +7,8 @@ import java.util.stream.IntStream;
 import Kattis.Kattio;
 
 //till sen: kolla logik decimaler d kan fucka
+// and states the value of the e-modulus that shall be matched exactly.
+//MANNEN
 
 public class Ecoin {
 
@@ -38,8 +40,6 @@ public class Ecoin {
 
     //om för långsam sen när d funkar byt txb till coinsused return nu när d fixat
     private void recursive(int coinsUsed, int[] nbrEachCoin) {
-        int[] bestState = null;
-
         int eMod = 0;
         coinsUsed++;
         for (int i = 0; i < coins.length; i++) {
@@ -52,7 +52,7 @@ public class Ecoin {
 
             minNbrToReach[eMod] = coinsUsed;
             if (eMod==s){
-                bestState = state;
+
                 continue;
             }
             recursive(coinsUsed,Arrays.copyOf(state, coins.length));
