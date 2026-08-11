@@ -7,21 +7,6 @@
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Kattio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Knapsack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Search1/CandyDivision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search1/CandyDivision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Search1/Euclid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search1/Euclid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Search2/Porto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search2/Porto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Search2/PortoStatic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search2/PortoStatic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/Search3/Eko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Search3/Eko.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/SearchHarder/Colorland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/SearchHarder/Colorland.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/BlockCrusherNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/BlockCrusherNodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/Kattio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/MST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/MST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/SSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/SSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenericClasses/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenericClasses/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenericClasses/GraphSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenericClasses/GraphSimple.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +77,7 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChopWood (1)">
+  <component name="RunManager" selected="Application.Ecoin (1)">
     <configuration name="BlockCrusher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE389.BlockCrusher" />
       <module name="Kattis-Problems" />
@@ -160,9 +145,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ecoin (1)" />
         <item itemvalue="Application.ChopWood (1)" />
         <item itemvalue="Application.ChopWood" />
-        <item itemvalue="Application.Ecoin (1)" />
         <item itemvalue="Application.BlockCrusherNodes" />
         <item itemvalue="Application.BlockCrusher" />
       </list>
@@ -248,6 +233,11 @@
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
           <line>96</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

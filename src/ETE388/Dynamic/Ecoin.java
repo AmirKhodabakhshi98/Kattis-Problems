@@ -1,7 +1,9 @@
 package ETE388.Dynamic;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.stream.IntStream;
+
 import Kattis.Kattio;
 
 
@@ -11,18 +13,109 @@ public class Ecoin {
     Coin[] coins;
     int s;
     int[] nbrEachCoin;
+    HashMap<Integer, Integer> nbrEachCoinMap = new HashMap<>();
+    int[] minNbrToReach;
+    final String notPossible = "not possible";
 
 
     public Ecoin(Coin[] coins, int s){
         this.coins=coins;
         this.s=s;
         nbrEachCoin = new int[coins.length];
+        minNbrToReach = new int[s+1]; //bästa/minsta antal coins för o komma itll värdert
+        Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
+
+        int[] ans = recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
+        if (ans==null){
+            System.out.println(notPossible);
+        }else {
+            System.out.println(IntStream.of(ans).sum());
+        }
     }
 
 
+    private int[] recursive(int coinsUsed, int[] nbrEachCoin) {
 
 
-    private int eModulus(){
+        int eMod = 0;
+        coinsUsed++;
+        for (int i = 0; i < coins.length; i++) {
+            nbrEachCoin[i]++;
+            eMod = eModolus(nbrEachCoin);
+            nbrEachCoin[i]--;
+            if (eMod>s || minNbrToReach[eMod]<=coinsUsed){ //om overshoot, eller, sämre väg hit -> cont
+                continue;
+            }
+            nbrEachCoin[i]++;
+            minNbrToReach[eMod] = coinsUsed;
+            if (eMod==s){
+                return nbrEachCoin;
+            }
+
+            return recursive(coinsUsed+1,Arrays.copyOf(nbrEachCoin, coins.length));
+
+        }
+        return null;
+    }
+
+/*
+    private int recursive(int coinsUsed, int[] nbrEachCoin) {
+
+
+        int eMod = 0;
+        coinsUsed++;
+        for (int i = 0; i < coins.length; i++) {
+            nbrEachCoin[i]++;
+            eMod = eModolus(nbrEachCoin);
+            nbrEachCoin[i]--;
+            if (eMod>s || minNbrToReach[eMod]<=coinsUsed){ //om overshoot, eller, sämre väg hit -> cont
+                continue;
+            }
+            nbrEachCoin[i]++;
+            minNbrToReach[eMod] = coinsUsed;
+            if (eMod==s){
+               return coinsUsed;
+            }
+
+            return recursive(coinsUsed+1,Arrays.copyOf(nbrEachCoin, coins.length));
+
+        }
+        return -1;
+    }
+    */
+
+/*
+    private void recursive( int CoinIndex, int value, int[] nbrEachCoin){
+
+
+        int eMod =0;
+        for (int i = 0; i < coins.length; i++) {
+                nbrEachCoin[i]++;
+                eMod = eModolus(nbrEachCoin);
+                if ()
+
+        }
+
+    }*/
+
+
+
+    private int eModolus(int[] nbrEachCoin){
+        int convSum = 0;
+        int infoSum = 0;
+
+        for (int i = 0; i < coins.length; i++) {
+            if (nbrEachCoin[i] == 0){
+                continue;
+            }
+            convSum += coins[i].conventionalValue*nbrEachCoin[i];
+            infoSum += coins[i].infoValue*nbrEachCoin[i];
+        }
+        return (int) Math.sqrt(Math.pow(convSum,2)+Math.pow(infoSum,2));
+    }
+
+    /*
+    private int eModulus2(){
         int convSum = 0;
         int infoSum = 0;
         for (int i=0; i<coins.length; i++){ //lim+1?
@@ -30,13 +123,13 @@ public class Ecoin {
             infoSum+= coins[i].infoValue * coins[i].amount; //* nbrEachCoin[i];
         }
         return (int) Math.sqrt(Math.pow(convSum,2)+Math.pow(infoSum,2));
-    }
+    }*/
 
 
     private static class Coin{
         int infoValue;
         int conventionalValue;
-        int singleCoinValue;
+        int singleCoinValue; //nvm för nu
         int amount = 0;
 
         public Coin(int conventionalValue, int infoValue){
@@ -44,6 +137,8 @@ public class Ecoin {
             this.infoValue = infoValue;
         }
     }
+
+
 
 
     public static void main(String[] args) {
@@ -61,6 +156,9 @@ public class Ecoin {
             Ecoin ecoin = new Ecoin(coins,s);
             //ecoin.ans or sth
         }
+
+        io.flush();
+        io.close();
 
     }
 }
