@@ -26,10 +26,6 @@ public class Ecoin {
         minNbrToReach = new int[s+1]; //bästa/minsta antal coins för o komma itll värdert
         Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
 
-        /* //felräkning coinsused fixa om tid nt bra
-        int ans = recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
-        System.out.println(ans);
-        */
 
         int[] ans = recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
         if (ans!=null){
@@ -39,6 +35,7 @@ public class Ecoin {
     }
 
 
+    //om för långsam sen när d funkar byt txb till coinsused return nu när d fixat
     private int[] recursive(int coinsUsed, int[] nbrEachCoin) {
 
 
@@ -57,53 +54,11 @@ public class Ecoin {
                 return nbrEachCoin;
             }
 
-            return recursive(coinsUsed+1,Arrays.copyOf(nbrEachCoin, coins.length));
+            return recursive(coinsUsed,Arrays.copyOf(nbrEachCoin, coins.length));
 
         }
         return null;
     }
-    /*
-
-
-    private int recursive(int coinsUsed, int[] nbrEachCoin) {
-
-
-        int eMod = 0;
-        coinsUsed++;
-        for (int i = 0; i < coins.length; i++) {
-            nbrEachCoin[i]++;
-            eMod = eModolus(nbrEachCoin);
-            nbrEachCoin[i]--;
-            if (eMod>s || minNbrToReach[eMod]<=coinsUsed){ //om overshoot, eller, sämre väg hit -> cont
-                continue;
-            }
-            nbrEachCoin[i]++;
-            minNbrToReach[eMod] = coinsUsed;
-            if (eMod==s){
-               return coinsUsed;
-            }
-
-            return recursive(coinsUsed+1,Arrays.copyOf(nbrEachCoin, coins.length));
-
-        }
-        return -1;
-    }
-*/
-
-/*
-    private void recursive( int CoinIndex, int value, int[] nbrEachCoin){
-
-
-        int eMod =0;
-        for (int i = 0; i < coins.length; i++) {
-                nbrEachCoin[i]++;
-                eMod = eModolus(nbrEachCoin);
-                if ()
-
-        }
-
-    }*/
-
 
 
     private int eModolus(int[] nbrEachCoin){
@@ -119,17 +74,6 @@ public class Ecoin {
         }
         return (int) Math.sqrt(Math.pow(convSum,2)+Math.pow(infoSum,2));
     }
-
-    /*
-    private int eModulus2(){
-        int convSum = 0;
-        int infoSum = 0;
-        for (int i=0; i<coins.length; i++){ //lim+1?
-            convSum+= coins[i].conventionalValue * coins[i].amount; //* nbrEachCoin[i];
-            infoSum+= coins[i].infoValue * coins[i].amount; //* nbrEachCoin[i];
-        }
-        return (int) Math.sqrt(Math.pow(convSum,2)+Math.pow(infoSum,2));
-    }*/
 
 
     private static class Coin{

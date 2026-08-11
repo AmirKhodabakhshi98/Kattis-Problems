@@ -42,7 +42,7 @@
     "Application.BlockCrusherNodes.executor": "Run",
     "Application.ChopWood (1).executor": "Run",
     "Application.ChopWood.executor": "Run",
-    "Application.Ecoin (1).executor": "Run",
+    "Application.Ecoin (1).executor": "Debug",
     "Application.Ecoin.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.PortoStatic.executor": "Run",
@@ -235,8 +235,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="16" />
+          <line>55</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
