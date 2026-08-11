@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +235,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
-          <line>64</line>
+          <line>70</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>

@@ -16,6 +16,7 @@ public class Ecoin {
     HashMap<Integer, Integer> nbrEachCoinMap = new HashMap<>();
     int[] minNbrToReach;
     final String notPossible = "not possible";
+    int ans = -1;
 
 
     public Ecoin(Coin[] coins, int s){
@@ -25,12 +26,16 @@ public class Ecoin {
         minNbrToReach = new int[s+1]; //bästa/minsta antal coins för o komma itll värdert
         Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
 
+        /* //felräkning coinsused fixa om tid nt bra
+        int ans = recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
+        System.out.println(ans);
+        */
+
         int[] ans = recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
-        if (ans==null){
-            System.out.println(notPossible);
-        }else {
-            System.out.println(IntStream.of(ans).sum());
+        if (ans!=null){
+            this.ans = (IntStream.of(ans).sum());
         }
+
     }
 
 
@@ -57,8 +62,9 @@ public class Ecoin {
         }
         return null;
     }
+    /*
 
-/*
+
     private int recursive(int coinsUsed, int[] nbrEachCoin) {
 
 
@@ -82,7 +88,7 @@ public class Ecoin {
         }
         return -1;
     }
-    */
+*/
 
 /*
     private void recursive( int CoinIndex, int value, int[] nbrEachCoin){
@@ -155,6 +161,10 @@ public class Ecoin {
             }
             Ecoin ecoin = new Ecoin(coins,s);
             //ecoin.ans or sth
+            if (ecoin.ans != -1){
+                io.println(ecoin.ans);
+            }
+            else io.println("not possible");
         }
 
         io.flush();
