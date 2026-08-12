@@ -41,7 +41,7 @@ public class Ecoin {
         int eMod = 0;
         coinsUsed++;
         for (int i = 0; i < coins.length; i++) {
-            int[] state = Arrays.copyOf(nbrEachCoin, coins.length);
+            int[] state = Arrays.copyOf(nbrEachCoin, coins.length); //SUS
             state[i]++;
             eMod = eModolus(state);
 
@@ -115,7 +115,6 @@ public class Ecoin {
                 int info = io.getInt();
                 if (inputCheck(conv,info,s)){
                     coins.add(new Coin( conv, info));
-
                 }
             }
             Coin[] coinArray = new Coin[coins.size()];
