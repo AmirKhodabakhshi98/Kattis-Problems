@@ -43,7 +43,7 @@
     "Application.BlockCrusherNodes.executor": "Run",
     "Application.ChopWood (1).executor": "Run",
     "Application.ChopWood.executor": "Run",
-    "Application.Ecoin (1).executor": "Debug",
+    "Application.Ecoin (1).executor": "Run",
     "Application.Ecoin.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.PortoStatic.executor": "Run",
@@ -236,16 +236,6 @@
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
           <line>96</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

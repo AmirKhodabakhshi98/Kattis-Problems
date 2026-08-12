@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 
-//till sen: kolla logik decimaler
+
 // and states the value of the e-modulus that shall be matched exactly.
 
 public class Ecoin {
@@ -16,42 +16,98 @@ public class Ecoin {
     int s; //sqrd
     int[] nbrEachCoin;
     int[] minNbrToReach;
-    final String notPossible = "not possible";
-    int ans = -1;
+    int ans = Integer.MAX_VALUE;
 
 
+    int[][] convInfo;
     public Ecoin(Coin[] coins, int sIn){
         this.coins=coins;
         this.s=sIn*sIn;
         nbrEachCoin = new int[coins.length];
         minNbrToReach = new int[s+1]; //bästa/minsta antal coins för o komma itll värdert
         Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
+        convInfo = new int[s+1][s+1];
+        for (int[] ints : convInfo) {
+            Arrays.fill(ints, Integer.MAX_VALUE);
+        }
+
+        recursive(0, 0,0);
+
+  //      System.err.println("debug");
+
+    }
 
 
-        recursive(0, Arrays.copyOf(nbrEachCoin, coins.length));
-        if (minNbrToReach[s] != Integer.MAX_VALUE) {
-            ans = minNbrToReach[s];
+
+    private void recursive(int coinsUsed, int conv, int info) {
+        coinsUsed++;
+
+
+        for (int i = 0; i < coins.length; i++) {
+            conv+= coins[i].conventionalValue;
+            info+= coins[i].infoValue;
+
+            int convSum = sumSquared(conv);
+            int infoSum = sumSquared(info);
+            int convInfoSum = convSum + infoSum;
+
+            if (convInfoSum>s ){ //om overshoot, eller, sämre väg hit -> cont
+                continue;
+            }
+
+            if (convInfo[conv][info]<=coinsUsed){
+                continue;
+            }
+
+            convInfo[conv][info]=coinsUsed;
+
+            if (convInfoSum==s){
+                if (coinsUsed < ans){
+                    ans = coinsUsed;
+                }
+                continue;
+            }
+            
+            recursive(coinsUsed,conv,info);
         }
 
     }
 
 
-    //om för långsam sen när d funkar byt txb till coinsused return nu när d fixat
+    private int sumSquared(int sum){
+        return (int) Math.pow(sum,2);
+
+    }
+
+
+
+/*
     private void recursive(int coinsUsed, int[] nbrEachCoin) {
-        int eMod = 0;
+        //int eMod = 0;
         coinsUsed++;
+
         for (int i = 0; i < coins.length; i++) {
             int[] state = Arrays.copyOf(nbrEachCoin, coins.length); //SUS
+
             state[i]++;
-            eMod = eModolus(state);
+            //eMod = eModolus(state);
+            int convSum = convSum(state);
+            int infoSum = infoSum(state);
+            int convInfoSum = convSum+infoSum;
 
-
-            if (eMod>s || minNbrToReach[eMod]<=coinsUsed){ //om overshoot, eller, sämre väg hit -> cont
+            if (convInfoSum>s ){ //om overshoot, eller, sämre väg hit -> cont
                 continue;
             }
 
-            minNbrToReach[eMod] = coinsUsed;
-            if (eMod==s){
+            if (convInfo[convSum][infoSum]<=coinsUsed){
+                continue;
+            }
+
+            convInfo[convSum][infoSum]=coinsUsed;
+            if (convInfoSum==s){
+                if (coinsUsed < ans){
+                    ans = coinsUsed;
+                }
                 continue;
             }
             recursive(coinsUsed,Arrays.copyOf(state, coins.length));
@@ -59,7 +115,10 @@ public class Ecoin {
 
     }
 
+ */
 
+
+/*
     private int eModolus(int[] nbrEachCoin){
         int convSum = 0;
         int infoSum = 0;
@@ -75,6 +134,9 @@ public class Ecoin {
     }
 
 
+ */
+
+
     private static class Coin{
         int infoValue;
         int conventionalValue;
@@ -87,7 +149,6 @@ public class Ecoin {
 
 
     private static boolean inputCheck(int conv, int info, int s){
-        boolean check = true;
         int left = (int) (Math.pow(conv,2)+Math.pow(info,2));
         if (left > (s*s)) {
             return false;
@@ -109,19 +170,18 @@ public class Ecoin {
             ArrayList<Coin> coins = new ArrayList<>();
 
             for (int j=0; j<m; j++){
-                //ta bort >s i ett värde om tid behövs
-                //nvm finns nt enl upgf
                 int conv = io.getInt();
                 int info = io.getInt();
                 if (inputCheck(conv,info,s)){
                     coins.add(new Coin( conv, info));
                 }
             }
+
             Coin[] coinArray = new Coin[coins.size()];
             coins.toArray(coinArray);
             Ecoin ecoin = new Ecoin(coins.toArray(coinArray),s);
             //ecoin.ans or sth
-            if (ecoin.ans != -1){
+            if (ecoin.ans != Integer.MAX_VALUE){
                 io.println(ecoin.ans);
             }
             else io.println("not possible");
