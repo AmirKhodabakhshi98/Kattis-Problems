@@ -1,6 +1,7 @@
 package ETE388.Dynamic;
 import Kattis.Kattio;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -21,7 +22,7 @@ public class Ecoin {
 
     public Ecoin(Coin[] coins, int sIn){
         this.coins=coins;
-        this.s=s*s;
+        this.s=sIn*sIn;
         nbrEachCoin = new int[coins.length];
         minNbrToReach = new int[s+1]; //bästa/minsta antal coins för o komma itll värdert
         Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
@@ -85,6 +86,15 @@ public class Ecoin {
     }
 
 
+    private static boolean inputCheck(int conv, int info, int s){
+        boolean check = true;
+        int left = (int) (Math.pow(conv,2)+Math.pow(info,2));
+        if (left > (s*s)) {
+            return false;
+        }
+        return true;
+
+    }
 
 
     public static void main(String[] args) {
@@ -95,15 +105,22 @@ public class Ecoin {
         for (int i = 0; i<n;i++){
             int m = io.getInt();
             int s = io.getInt();
-            Coin[] coins = new Coin[m];
+            //Coin[] coins = new Coin[m];
+            ArrayList<Coin> coins = new ArrayList<>();
 
             for (int j=0; j<m; j++){
                 //ta bort >s i ett värde om tid behövs
                 //nvm finns nt enl upgf
-                coins[j] = new Coin( io.getInt(), io.getInt());
-            }
+                int conv = io.getInt();
+                int info = io.getInt();
+                if (inputCheck(conv,info,s)){
+                    coins.add(new Coin( conv, info));
 
-            Ecoin ecoin = new Ecoin(coins,s);
+                }
+            }
+            Coin[] coinArray = new Coin[coins.size()];
+            coins.toArray(coinArray);
+            Ecoin ecoin = new Ecoin(coins.toArray(coinArray),s);
             //ecoin.ans or sth
             if (ecoin.ans != -1){
                 io.println(ecoin.ans);

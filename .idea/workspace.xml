@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/EcoinOld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
     </list>
@@ -44,7 +43,7 @@
     "Application.BlockCrusherNodes.executor": "Run",
     "Application.ChopWood (1).executor": "Run",
     "Application.ChopWood.executor": "Run",
-    "Application.Ecoin (1).executor": "Run",
+    "Application.Ecoin (1).executor": "Debug",
     "Application.Ecoin.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.PortoStatic.executor": "Run",
@@ -240,8 +239,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="16" />
+          <line>92</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
