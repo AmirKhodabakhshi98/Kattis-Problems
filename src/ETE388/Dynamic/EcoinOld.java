@@ -1,8 +1,10 @@
+/*
 package ETE388.Dynamic;
 import Kattis.Kattio;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.stream.IntStream;
 
 
 //till sen: kolla logik decimaler
@@ -12,16 +14,17 @@ public class Ecoin {
 
 
     Coin[] coins;
-    int s; //sqrd
+    int s;
     int[] nbrEachCoin;
+    HashMap<Integer, Integer> nbrEachCoinMap = new HashMap<>();
     int[] minNbrToReach;
     final String notPossible = "not possible";
     int ans = -1;
 
 
-    public Ecoin(Coin[] coins, int sIn){
+    public Ecoin(Coin[] coins, int s){
         this.coins=coins;
-        this.s=s*s;
+        this.s=s;
         nbrEachCoin = new int[coins.length];
         minNbrToReach = new int[s+1]; //bästa/minsta antal coins för o komma itll värdert
         Arrays.fill(minNbrToReach, Integer.MAX_VALUE);
@@ -38,19 +41,23 @@ public class Ecoin {
     //om för långsam sen när d funkar byt txb till coinsused return nu när d fixat
     private void recursive(int coinsUsed, int[] nbrEachCoin) {
         int eMod = 0;
+        double eModDouble = 0;
         coinsUsed++;
         for (int i = 0; i < coins.length; i++) {
             int[] state = Arrays.copyOf(nbrEachCoin, coins.length);
             state[i]++;
-            eMod = eModolus(state);
-
-
+            eModDouble = eModolus(state);
+            if (eModDouble % 1 != 0){
+                continue;
+            }
+            eMod = (int) eModDouble;
             if (eMod>s || minNbrToReach[eMod]<=coinsUsed){ //om overshoot, eller, sämre väg hit -> cont
                 continue;
             }
 
             minNbrToReach[eMod] = coinsUsed;
             if (eMod==s){
+
                 continue;
             }
             recursive(coinsUsed,Arrays.copyOf(state, coins.length));
@@ -59,7 +66,7 @@ public class Ecoin {
     }
 
 
-    private int eModolus(int[] nbrEachCoin){
+    private double eModolus(int[] nbrEachCoin){
         int convSum = 0;
         int infoSum = 0;
 
@@ -70,13 +77,15 @@ public class Ecoin {
             convSum += coins[i].conventionalValue*nbrEachCoin[i];
             infoSum += coins[i].infoValue*nbrEachCoin[i];
         }
-        return (int) (Math.pow(convSum,2)+Math.pow(infoSum,2));
+        return Math.sqrt(Math.pow(convSum,2)+Math.pow(infoSum,2));
     }
 
 
     private static class Coin{
         int infoValue;
         int conventionalValue;
+        int singleCoinValue; //nvm för nu
+        int amount = 0;
 
         public Coin(int conventionalValue, int infoValue){
             this.conventionalValue=conventionalValue;
@@ -96,13 +105,10 @@ public class Ecoin {
             int m = io.getInt();
             int s = io.getInt();
             Coin[] coins = new Coin[m];
-
             for (int j=0; j<m; j++){
                 //ta bort >s i ett värde om tid behövs
-                //nvm finns nt enl upgf
-                coins[j] = new Coin( io.getInt(), io.getInt());
+                coins[j] = new Coin(io.getInt(),io.getInt());
             }
-
             Ecoin ecoin = new Ecoin(coins,s);
             //ecoin.ans or sth
             if (ecoin.ans != -1){
@@ -116,3 +122,5 @@ public class Ecoin {
 
     }
 }
+
+ */
