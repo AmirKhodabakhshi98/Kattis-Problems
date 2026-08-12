@@ -65,7 +65,6 @@ public class Ecoin {
 
             recursive(coinsUsed,convSum,infoSum);
         }
-
     }
 
 

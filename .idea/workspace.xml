@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/ExchangeRates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/Ecoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/EcoinOld.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,7 @@
     "Application.ChopWood.executor": "Run",
     "Application.Ecoin (1).executor": "Run",
     "Application.Ecoin.executor": "Run",
+    "Application.ExchangeRates.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.PortoStatic.executor": "Run",
     "Application.SSP.executor": "Run",
@@ -79,20 +83,7 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Ecoin (1)">
-    <configuration name="BlockCrusher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE389.BlockCrusher" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE389.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ExchangeRates">
     <configuration name="BlockCrusherNodes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE389.BlockCrusherNodes" />
       <module name="Kattis-Problems" />
@@ -145,13 +136,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExchangeRates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.ExchangeRates" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE388.Dynamic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExchangeRates" />
         <item itemvalue="Application.Ecoin (1)" />
         <item itemvalue="Application.ChopWood (1)" />
         <item itemvalue="Application.ChopWood" />
         <item itemvalue="Application.BlockCrusherNodes" />
-        <item itemvalue="Application.BlockCrusher" />
       </list>
     </recent_temporary>
   </component>
