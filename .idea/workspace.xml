@@ -47,7 +47,7 @@
     "Application.Ecoin.executor": "Run",
     "Application.ExchangeRates.executor": "Run",
     "Application.Ljutna.executor": "Run",
-    "Application.Paintings.executor": "Debug",
+    "Application.Paintings.executor": "Run",
     "Application.PortoStatic.executor": "Run",
     "Application.SSP.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -238,16 +238,6 @@
           <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
           <line>96</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE388/SearchHarder/Paintings.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE388/SearchHarder/Paintings.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
