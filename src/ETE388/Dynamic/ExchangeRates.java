@@ -13,7 +13,7 @@ public class ExchangeRates {
     ExchangeRates(double[] rates){
         this.rates = rates;
         cadUsdDay = new double[rates.length][2];
-        naive(savings, isCAD, 0 );
+        recursiveDP(savings, isCAD, 0 );
         ans = cadUsdDay[rates.length-1][0];
     }
 
@@ -21,7 +21,7 @@ public class ExchangeRates {
 
 
     int calls = 0;
-    private void naive(double savings, boolean isCAD, int day){
+    private void recursiveDP(double savings, boolean isCAD, int day){
         calls++;
         boolean improvementFoundDoNothing = true;
         boolean improvementFoundExchanged = true;
@@ -50,11 +50,11 @@ public class ExchangeRates {
         }
 
         if (improvementFoundDoNothing){
-            naive(savings,isCAD,day);
+            recursiveDP(savings,isCAD,day);
         }
 
         if (improvementFoundExchanged){
-            naive(exchanged,!isCAD,day);
+            recursiveDP(exchanged,!isCAD,day);
         }
     }
 

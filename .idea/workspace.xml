@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ETE389/MSTPrim.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/ExchangeRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/ExchangeRates.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,7 @@
     "Application.Ecoin.executor": "Run",
     "Application.ExchangeRates.executor": "Run",
     "Application.Ljutna.executor": "Run",
+    "Application.MSTPrim.executor": "Run",
     "Application.Paintings.executor": "Run",
     "Application.PortoStatic.executor": "Run",
     "Application.SSP.executor": "Run",
@@ -81,21 +84,8 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExchangeRates">
+  <component name="RunManager" selected="Application.MSTPrim">
     <configuration name="ChopWood (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TDDD95.DataStructures.ChopWood" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TDDD95.DataStructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChopWood" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TDDD95.DataStructures.ChopWood" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
@@ -134,6 +124,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MSTPrim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.MSTPrim" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Paintings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE388.SearchHarder.Paintings" />
       <module name="Kattis-Problems" />
@@ -149,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MSTPrim" />
         <item itemvalue="Application.ExchangeRates" />
         <item itemvalue="Application.Paintings" />
         <item itemvalue="Application.Ecoin (1)" />
         <item itemvalue="Application.ChopWood (1)" />
-        <item itemvalue="Application.ChopWood" />
       </list>
     </recent_temporary>
   </component>
@@ -246,6 +249,7 @@
         <watch expression="sumValue" />
         <watch expression="arr[s.length]" language="JAVA" />
         <watch expression="visitedTotal" language="JAVA" />
+        <watch expression="mst2" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
