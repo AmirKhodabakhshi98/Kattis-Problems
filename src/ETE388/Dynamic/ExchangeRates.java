@@ -10,30 +10,92 @@ public class ExchangeRates {
     private boolean isCAD = true; //t/f?
     private double[] rates;
     private double comission = 0.97;
+    private double cadUsdDay[][];
 
     ExchangeRates(double[] rates){
         this.rates = rates;
-        ans = naive(savings, isCAD, 0 );
+        cadUsdDay = new double[rates.length][2];
+        naive(savings, isCAD, 0 );
+        ans = cadUsdDay[rates.length-1][0];
+        System.err.println("\n" + calls + "\n");
+    }
+
+
+    //add rounding mode fix
+
+
+    int calls = 0;
+    private void naive(double savings, boolean isCAD, int day){
+        calls++;
+        System.err.println("calls:" + calls + " savings:" + savings + " isCAD:" + isCAD + " day:" + day);
+        boolean improvementFound = true;
+
+        double exchanged = exchange(savings, rates[day], isCAD);
+
+        if (isCAD && savings > cadUsdDay[day][0]){
+            cadUsdDay[day][0] = savings;
+         //  System.err.println("day: " + day + "cad saving; " + savings);
+        }else if (!isCAD && savings > cadUsdDay[day][1] ){
+          //  System.err.println("day: " + day + "usd saving; " + savings);
+
+            cadUsdDay[day][1] = savings;
+        } else {
+            improvementFound = false;
+        }
+
+        if (!isCAD && exchanged > cadUsdDay[day][0]){
+            cadUsdDay[day][0] = exchanged;
+          //  System.err.println("day: " + day + "cad saving; " + exchanged);
+        }else if (isCAD && exchanged > cadUsdDay[day][1] ){
+           // System.err.println("day: " + day + "usd saving; " + exchanged);
+
+            cadUsdDay[day][1] = exchanged;
+        }else {improvementFound = false;}
+
+
+        day++;
+        //if (day == rates.length){
+         //   return;
+       // }
+
+        if (!improvementFound || day == rates.length){
+            return;
+        }
+
+        naive(savings,isCAD,day);//gör nt nåt
+        //double exchanged = exchange(savings, rates[day], isCAD);
+        naive(exchanged,!isCAD,day);
 
     }
 
 
 
+
+    /*
     private double naive(double savings, boolean isCAD, int day){
-        if (day== rates.length){
+
+        if (isCAD && savings > cadUsdDay[day][0]){
+            cadUsdDay[day][0] = savings;
+        }else if (!isCAD && savings > cadUsdDay[day][1] ){
+            cadUsdDay[day][1] = savings;
+        }else {
+            return savings;
+        }
+
+        if (day == rates.length){
             return savings;
         }
 
 
-        return naive(exchange(savings,rates[day],isCAD),
-                !isCAD,day+1);
 
 
+
+        return -1;
     }
-
+*/
 
     private double exchange(double savings, double rate, boolean isCAD){
-
+       // System.err.println(isCAD);
 
         if (isCAD){
             return (savings/rate)*comission;
