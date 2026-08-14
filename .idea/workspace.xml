@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE388/SearchHarder/Paintings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/SearchHarder/Paintings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE388/Dynamic/ExchangeRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE388/Dynamic/ExchangeRates.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,43 +37,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BlockCrusher.executor": "Run",
-    "Application.BlockCrusherNodes.executor": "Run",
-    "Application.ChopWood (1).executor": "Run",
-    "Application.ChopWood.executor": "Run",
-    "Application.Ecoin (1).executor": "Run",
-    "Application.Ecoin.executor": "Run",
-    "Application.ExchangeRates.executor": "Run",
-    "Application.Ljutna.executor": "Run",
-    "Application.Paintings.executor": "Run",
-    "Application.PortoStatic.executor": "Run",
-    "Application.SSP.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/A/Documents/GitHub/Kattis-Problems/src/TDDD95",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BlockCrusher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BlockCrusherNodes.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChopWood (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChopWood.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ecoin (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ecoin.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExchangeRates.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ljutna.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Paintings.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PortoStatic.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SSP.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/A/Documents/GitHub/Kattis-Problems/src/TDDD95&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\A\Documents\GitHub\Kattis-Problems\src\TDDD95" />
@@ -82,7 +82,7 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Paintings">
+  <component name="RunManager" selected="Application.ExchangeRates">
     <configuration name="ChopWood (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TDDD95.DataStructures.ChopWood" />
       <module name="Kattis-Problems" />
@@ -150,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Paintings" />
         <item itemvalue="Application.ExchangeRates" />
+        <item itemvalue="Application.Paintings" />
         <item itemvalue="Application.Ecoin (1)" />
         <item itemvalue="Application.ChopWood (1)" />
         <item itemvalue="Application.ChopWood" />
