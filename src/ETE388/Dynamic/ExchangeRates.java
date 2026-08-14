@@ -1,8 +1,6 @@
 package ETE388.Dynamic;
 import Kattis.Kattio;
 
-//dec format
-
 
 public class ExchangeRates {
     private double ans = 1000;
@@ -17,95 +15,62 @@ public class ExchangeRates {
         cadUsdDay = new double[rates.length][2];
         naive(savings, isCAD, 0 );
         ans = cadUsdDay[rates.length-1][0];
-        System.err.println("\n" + calls + "\n");
     }
 
 
-    //add rounding mode fix
 
 
     int calls = 0;
     private void naive(double savings, boolean isCAD, int day){
         calls++;
-        System.err.println("calls:" + calls + " savings:" + savings + " isCAD:" + isCAD + " day:" + day);
-        boolean improvementFound = true;
+        boolean improvementFoundDoNothing = true;
+        boolean improvementFoundExchanged = true;
 
         double exchanged = exchange(savings, rates[day], isCAD);
 
         if (isCAD && savings > cadUsdDay[day][0]){
             cadUsdDay[day][0] = savings;
-         //  System.err.println("day: " + day + "cad saving; " + savings);
         }else if (!isCAD && savings > cadUsdDay[day][1] ){
-          //  System.err.println("day: " + day + "usd saving; " + savings);
 
             cadUsdDay[day][1] = savings;
         } else {
-            improvementFound = false;
+            improvementFoundDoNothing = false;
         }
 
         if (!isCAD && exchanged > cadUsdDay[day][0]){
             cadUsdDay[day][0] = exchanged;
-          //  System.err.println("day: " + day + "cad saving; " + exchanged);
         }else if (isCAD && exchanged > cadUsdDay[day][1] ){
-           // System.err.println("day: " + day + "usd saving; " + exchanged);
-
             cadUsdDay[day][1] = exchanged;
-        }else {improvementFound = false;}
+        }else {improvementFoundExchanged = false;}
 
 
         day++;
-        //if (day == rates.length){
-         //   return;
-       // }
-
-        if (!improvementFound || day == rates.length){
+        if (day == rates.length){
             return;
         }
 
-        naive(savings,isCAD,day);//gör nt nåt
-        //double exchanged = exchange(savings, rates[day], isCAD);
-        naive(exchanged,!isCAD,day);
-
-    }
-
-
-
-
-    /*
-    private double naive(double savings, boolean isCAD, int day){
-
-        if (isCAD && savings > cadUsdDay[day][0]){
-            cadUsdDay[day][0] = savings;
-        }else if (!isCAD && savings > cadUsdDay[day][1] ){
-            cadUsdDay[day][1] = savings;
-        }else {
-            return savings;
+        if (improvementFoundDoNothing){
+            naive(savings,isCAD,day);
         }
 
-        if (day == rates.length){
-            return savings;
+        if (improvementFoundExchanged){
+            naive(exchanged,!isCAD,day);
         }
-
-
-
-
-
-        return -1;
     }
-*/
+
 
     private double exchange(double savings, double rate, boolean isCAD){
-       // System.err.println(isCAD);
-
+        double ans = 0;
         if (isCAD){
-            return (savings/rate)*comission;
+            ans = (savings/rate)*comission;
+        }else {
+            ans =  savings*rate*comission;
         }
-        return savings*rate*comission;
+        ans = Math.floor(ans*100)/100;
+        return ans;
     }
 
-
-
-    static void main() {
+    public static void main(String[] args) {
     Kattio io = new Kattio();
 
     int d = io.getInt();
@@ -115,14 +80,10 @@ public class ExchangeRates {
             rates[i] = io.getDouble();
         }
         ExchangeRates er = new ExchangeRates(rates);
-        io.println(er.ans);
+        io.printf("%.2f%n",er.ans);
         d = io.getInt();
     }
-
     io.flush();
     io.close();
-
     }
-
-
 }
