@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ETE389/MaxFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/MSTPrim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/MSTPrim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETE389/MST.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,8 @@
     "Application.Ecoin.executor": "Run",
     "Application.ExchangeRates.executor": "Run",
     "Application.Ljutna.executor": "Run",
-    "Application.MSTPrim.executor": "Run",
+    "Application.MSTPrim.executor": "Debug",
+    "Application.MaxFlow.executor": "Debug",
     "Application.Paintings.executor": "Run",
     "Application.PortoStatic.executor": "Run",
     "Application.SSP.executor": "Run",
@@ -83,20 +85,7 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MSTPrim">
-    <configuration name="ChopWood (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TDDD95.DataStructures.ChopWood" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TDDD95.DataStructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MaxFlow">
     <configuration name="Ecoin (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.Ecoin" />
       <module name="Kattis-Problems" />
@@ -136,6 +125,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MaxFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.MaxFlow" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Paintings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE388.SearchHarder.Paintings" />
       <module name="Kattis-Problems" />
@@ -151,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxFlow" />
         <item itemvalue="Application.MSTPrim" />
         <item itemvalue="Application.ExchangeRates" />
         <item itemvalue="Application.Paintings" />
         <item itemvalue="Application.Ecoin (1)" />
-        <item itemvalue="Application.ChopWood (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -216,29 +218,15 @@
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
-          <line>98</line>
-          <properties class="ETE389.MST" method="compare">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE389/SSP.java</url>
           <line>113</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ETE389/MST.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/ETE389/MaxFlow.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
