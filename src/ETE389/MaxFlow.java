@@ -16,14 +16,46 @@ public class MaxFlow {
         this.nodes = nodes;
         this.from = nodes[from];
         this.to = nodes[to];
+        nodes[to].sink = true;
+        nodes[from].sink = true;
     }
 
 
 
+    int maxFlow = -1;
+    private void edmondKarp(){
+        while (true){
+            //Node parent = bfs();
+
+            if (!bfs()){
+                break;
+            }
+            int bottleneck = 0;
+            Node current = to;
+
+            while (current != from){
+                Edge e = current.parentEdge;
+                int flow = current.parentEdge.flow;
+                bottleneck = Math.min(bottleneck, flow);
+                current = current.parent;
+            }
 
 
 
-    private void bfs(){
+
+
+
+
+
+
+        }
+
+
+    }
+
+
+
+    private boolean bfs(){
         Queue<Node> queue = new LinkedList<>();
         queue.add(from);
         from.visited = true;
@@ -36,11 +68,17 @@ public class MaxFlow {
                 if (edge.residualCapacity>0 && !next.visited) {
                     next.visited = true;
                     queue.add(next);
+                    next.parent = cur;
+                    next.parentEdge = edge;
+                    if (next.sink){
+                        //return next.parent;
+                        return true;
+                    }
                 }
 
             }
-
         }
+        return false;
     }
 
 
@@ -61,7 +99,11 @@ public class MaxFlow {
 
 
     private static class Node{
+        Node parent = null;
         ArrayList<Edge> edges = new ArrayList<>();
+        Edge parentEdge = null;
+        boolean sink = false;
+        boolean source = false;
         int flow = 0;
         boolean visited = false;
 
