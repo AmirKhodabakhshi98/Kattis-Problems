@@ -48,7 +48,7 @@
     "Application.ExchangeRates.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.MSTPrim.executor": "Debug",
-    "Application.MaxFlow.executor": "Debug",
+    "Application.MaxFlow.executor": "Run",
     "Application.Paintings.executor": "Run",
     "Application.PortoStatic.executor": "Run",
     "Application.SSP.executor": "Run",
@@ -224,8 +224,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ETE389/MaxFlow.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="16" />
+          <line>32</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

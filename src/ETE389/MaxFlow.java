@@ -3,6 +3,7 @@ package ETE389;
 import Kattis.Kattio;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,46 +12,48 @@ public class MaxFlow {
     private Node from;
     private Node to;
     private Node[] nodes;
+    int maxFlow = 0;
+    HashSet<Edge> pathEdges = new HashSet<>();
 
     public MaxFlow(int from, int to, Node[] nodes) {
         this.nodes = nodes;
         this.from = nodes[from];
         this.to = nodes[to];
-        nodes[to].sink = true;
-        nodes[from].sink = true;
+        edmondKarp();
     }
 
 
-
-    int maxFlow = -1;
     private void edmondKarp(){
-        while (true){
-            //Node parent = bfs();
 
+        while (true){
             if (!bfs()){
                 break;
             }
-            int bottleneck = 0;
-            Node current = to;
+
+            int bottleneck = pathFlow();
+
+            Node current  = to;
 
             while (current != from){
                 Edge e = current.parentEdge;
-                int flow = current.parentEdge.flow;
-                bottleneck = Math.min(bottleneck, flow);
+                e.residualCapacity-=bottleneck;
                 current = current.parent;
+                pathEdges.add(e);
             }
-
-
-
-
-
-
-
-
-
+            maxFlow += bottleneck;
         }
+    }
 
+    private int pathFlow(){
+        int bottleneck = Integer.MAX_VALUE;
+        Node current = to;
 
+        while (current != from){
+            int residualCapacity = current.parentEdge.residualCapacity;
+            bottleneck = Math.min(bottleneck, residualCapacity);
+            current = current.parent;
+        }
+        return bottleneck;
     }
 
 
@@ -58,7 +61,11 @@ public class MaxFlow {
     private boolean bfs(){
         Queue<Node> queue = new LinkedList<>();
         queue.add(from);
+        for (Node node : nodes) {
+            node.visited = false;
+        }
         from.visited = true;
+
 
         while (!queue.isEmpty()) {
             Node cur = queue.poll();
@@ -70,12 +77,10 @@ public class MaxFlow {
                     queue.add(next);
                     next.parent = cur;
                     next.parentEdge = edge;
-                    if (next.sink){
-                        //return next.parent;
+                    if (next == to){
                         return true;
                     }
                 }
-
             }
         }
         return false;
@@ -88,7 +93,7 @@ public class MaxFlow {
         Node to;
         int capacity;
         int residualCapacity;
-        int flow = 0;
+
         public Edge(Node from, Node to, int capacity) {
             this.from = from;
             this.to = to;
@@ -100,13 +105,14 @@ public class MaxFlow {
 
     private static class Node{
         Node parent = null;
-        ArrayList<Edge> edges = new ArrayList<>();
+        LinkedList<Edge> edges = new LinkedList<>();
         Edge parentEdge = null;
-        boolean sink = false;
-        boolean source = false;
-        int flow = 0;
+        int ID = -1;
         boolean visited = false;
 
+        Node(int ID){
+            this.ID = ID;
+        }
     }
 
 
@@ -119,20 +125,33 @@ public class MaxFlow {
         int s = io.getInt();
         int t = io.getInt();
         Node[] nodes = new Node[n];
-       // Node[] edges = new Node[m];
+        Edge[] edges = new Edge[m];
         for (int i = 0; i < n; i++) {
-            nodes[i] = new Node();
+            nodes[i] = new Node(i);
         }
         for (int i = 0; i < m; i++) {
-           // Edge e = new Edge(io.getInt(),io.getInt(),io.getInt())
             int from = io.getInt();
             int to = io.getInt();
             int capacity = io.getInt();
             Edge edge = new Edge(nodes[from], nodes[to], capacity);
             nodes[from].edges.add(edge);
+            edges[i] = edge;
         }
-        System.err.println();
+        MaxFlow mf = new MaxFlow(s,t,nodes);
 
+
+        io.println(n + " " +  mf.maxFlow + " " + mf.pathEdges.size());
+        if (mf.maxFlow != 0){
+            for (Edge edge : mf.pathEdges) {
+                if (edge.capacity-edge.residualCapacity<0 || edge.capacity == edge.residualCapacity){
+                    continue;
+                }
+                io.println(edge.from.ID + " " + edge.to.ID + " " + (edge.capacity-edge.residualCapacity));
+            }
+        }
+
+        io.flush();
+        io.close();
     }
 
 }
