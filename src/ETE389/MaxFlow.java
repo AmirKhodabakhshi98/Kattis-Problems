@@ -18,7 +18,20 @@ public class MaxFlow {
         this.nodes = nodes;
         this.from = nodes[from];
         this.to = nodes[to];
+      //  System.err.println("---------------");
+
+        for (Node node : nodes) {
+            for (Edge edge : node.edges) {
+                if (edge.forward){
+              //      System.err.println(edge.from.ID + " -> " + edge.to.ID);
+                }
+            }
+        }
+
+      //  System.err.println("--------------");
+
         edmondKarp();
+    //    System.err.println("from" + from + " to" + to);
     }
 
 
@@ -88,13 +101,14 @@ public class MaxFlow {
 
 
 
-    private static class Edge{
+    protected static class Edge{
         Node from;
         Node to;
         long capacity;
         long residualCapacity;
         Edge reverseEdge;
         boolean forward;
+
 
         public Edge(Node from, Node to, long capacity, boolean forward) {
             this.from = from;
@@ -106,13 +120,18 @@ public class MaxFlow {
     }
 
 
-    private static class Node{
+    protected static class Node{
         Node parent = null;
         LinkedList<Edge> edges = new LinkedList<>();
         Edge parentEdge = null;
         int ID = -1;
         boolean visited = false;
+        boolean left;
 
+        Node(int ID, boolean left){
+            this.ID = ID;
+            this.left = left;
+        }
         Node(int ID){
             this.ID = ID;
         }
@@ -128,10 +147,10 @@ public class MaxFlow {
         int s = io.getInt();
         int t = io.getInt();
         Node[] nodes = new Node[n];
-        Edge[] edges = new Edge[m];
         for (int i = 0; i < n; i++) {
             nodes[i] = new Node(i);
         }
+
         for (int i = 0; i < m; i++) {
             int from = io.getInt();
             int to = io.getInt();
@@ -144,7 +163,6 @@ public class MaxFlow {
             nodes[from].edges.add(edge);
             nodes[to].edges.add(reverseEdge);
 
-            //     edges[i] = edge;
         }
         MaxFlow mf = new MaxFlow(s,t,nodes);
 
