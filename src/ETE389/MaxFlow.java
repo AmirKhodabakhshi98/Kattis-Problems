@@ -18,20 +18,9 @@ public class MaxFlow {
         this.nodes = nodes;
         this.from = nodes[from];
         this.to = nodes[to];
-      //  System.err.println("---------------");
 
-        for (Node node : nodes) {
-            for (Edge edge : node.edges) {
-                if (edge.forward){
-              //      System.err.println(edge.from.ID + " -> " + edge.to.ID);
-                }
-            }
-        }
-
-      //  System.err.println("--------------");
 
         edmondKarp();
-    //    System.err.println("from" + from + " to" + to);
     }
 
 
