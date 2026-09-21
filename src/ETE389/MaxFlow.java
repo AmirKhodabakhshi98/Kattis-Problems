@@ -24,6 +24,19 @@ public class MaxFlow {
     }
 
 
+    public MaxFlow(){
+
+    }
+    public void manualEdmondKarp(int from, int to, Node[] nodes){
+        this.nodes = nodes;
+        this.from = nodes[from];
+        this.to = nodes[to];
+
+
+        edmondKarp();
+    }
+
+
     private void edmondKarp(){
 
         while (true){
