@@ -31,7 +31,8 @@ public class MaxFlow {
         this.nodes = nodes;
         this.from = nodes[from];
         this.to = nodes[to];
-
+        maxFlow = 0;
+        pathEdges = new HashSet<>();
 
         edmondKarp();
     }

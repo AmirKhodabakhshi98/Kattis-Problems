@@ -1,6 +1,8 @@
 package ETE389;
 import Kattis.Kattio;
 
+import java.util.LinkedList;
+
 
 public class RaDutyScheduler {
 
@@ -45,28 +47,33 @@ public class RaDutyScheduler {
         int[] days;
     }
 
-    private static int binarySearch(MaxFlow.Node[] nodes, int lower, int upper, int source, int sink, int raStart, int raEnd){
+    private static int binarySearch(MaxFlow.Node[] nodes, int lower, int upper, int source, int sink, int raStart, int raEnd, int days){
         MaxFlow mf = new MaxFlow(); // = new MaxFlow(source,sink, nodes);
         int maxSinkCap = upper*2; //uppeR=)days
         int ans = -1;
+
         while (lower <= upper){
-            int capacity = lower + upper /2;
+            int capacity = lower + (upper-lower) /2;
+            resetRaCapacities(nodes,0,days-1,2); //dag end
+            resetRaCapacities(nodes,raStart,raEnd,1);//ra dag
+            resetRaCapacities(nodes,source,source,capacity);//ra dag
+
+            //mf = new MaxFlow();
             mf.manualEdmondKarp(source,sink,nodes);
 
-            if (mf.maxFlow <= maxSinkCap){
+            if (mf.maxFlow == 2L *days){
                 ans = capacity;
                 upper = capacity-1;
             }else {
                 lower = capacity+1;
             }
 
-            resetRaCapacities(nodes,raStart, raEnd+1,capacity);//s1nk
         }
 
         return ans;
     }
 
-    static void main() {
+    static void main(String[] args) {
         Kattio io = new Kattio();
 
         int nbrOfRAs = io.getInt();
@@ -76,8 +83,8 @@ public class RaDutyScheduler {
         int sink = nodes.length-1;
         nodes[source] = new MaxFlow.Node(-1);
         nodes[sink] = new MaxFlow.Node(-1);
-        int raStart = days+1;
-        int raEnd = nodes.length-3;
+        int raStart = days;
+        int raEnd = days+nbrOfRAs-1;
         int capacity = 0;
 
         //days init
@@ -94,18 +101,42 @@ public class RaDutyScheduler {
             String[] words = line.split(" ");
             nodes[i] = new MaxFlow.Node(i,words[0]);
             EdgeInit(nodes,source, i,capacity);
-///////////ha koll på minmax dagar här sen
+///////////ha koll på minmax dagar här sen om för långsamt
             for (int j = 1; j < words.length; j++) {
                 int day = Integer.parseInt(words[j]);
-                EdgeInit(nodes, i, day, (1+days)/2);
+                EdgeInit(nodes, i, day-1, 1);
             }
             //String name = io.getWord();
         }
 
 
         //MaxFlow mf = binarySearch(nodes,1,days,source,sink, raStart, raEnd);
-        System.out.println(binarySearch(nodes,1,days,source,sink, raStart, raEnd));
+        int bin = binarySearch(nodes,1,days,source,sink, raStart, raEnd, days);
+        //System.out.println(bin);
+        resetRaCapacities(nodes,0,days-1,2); //dag end
+        resetRaCapacities(nodes,raStart,raEnd,1);//ra dag
+        resetRaCapacities(nodes,source,source,bin);//ra dag
+        MaxFlow mf = new MaxFlow();
+        mf.manualEdmondKarp(source,sink,nodes);
 
+
+        for (int i = 0; i < days; i++) {
+            MaxFlow.Node node = nodes[i];
+            io.print("Day " + node.ID + ": ");
+            LinkedList<String> list = new LinkedList<>();
+            for (MaxFlow.Edge edge : node.edges) {
+                if (!edge.forward){
+                    if (edge.residualCapacity>0){
+                     //   list.add(edge.to.name);
+                        io.print(edge.to.name + " ");
+                    }
+                }
+            }
+                io.println();
+        }
+
+        io.flush();
+        io.close();
       //  System.out.println(mf.maxFlow);
 
     }
