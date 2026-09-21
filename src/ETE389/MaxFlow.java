@@ -24,9 +24,10 @@ public class MaxFlow {
     }
 
 
+    //för ra duty
     public MaxFlow(){
 
-    }
+    }    //för ra duty
     public void manualEdmondKarp(int from, int to, Node[] nodes){
         this.nodes = nodes;
         this.from = nodes[from];

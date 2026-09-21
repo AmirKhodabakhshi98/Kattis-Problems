@@ -8,8 +8,7 @@ public class RaDutyScheduler {
 
 
 
-
-    private static void resetRaCapacities(MaxFlow.Node[] nodes, int start, int end, int capacity){
+    private static void resetRangeCapacities(MaxFlow.Node[] nodes, int start, int end, int capacity){
         for (int i = start; i <= end; i++){
             MaxFlow.Node node = nodes[i];
             for (MaxFlow.Edge edge : node.edges) {
@@ -24,41 +23,30 @@ public class RaDutyScheduler {
         }
     }
 
+    private static void resetAllCapacities(MaxFlow.Node[] nodes, int source, int raStart, int raEnd, int days, int capacity){
+        resetRangeCapacities(nodes,0,days-1,2); //dag end
+        resetRangeCapacities(nodes,raStart,raEnd,1);//ra dag
+        resetRangeCapacities(nodes,source,source,capacity);//source dag
+    }
+
 
     private static void EdgeInit(MaxFlow.Node[] nodes, int from, int to, int capacity){
-
         MaxFlow.Edge edge = new MaxFlow.Edge(nodes[from], nodes[to], capacity,true);
         MaxFlow.Edge reverseEdge = new MaxFlow.Edge(nodes[to], nodes[from], 0, false);
         edge.reverseEdge = reverseEdge;
         reverseEdge.reverseEdge = edge;
         nodes[from].edges.add(edge);
         nodes[to].edges.add(reverseEdge);
-
     }
 
-
-    private static void extractAnswer(MaxFlow.Node[] nodes, int raStart, int raEnd){
-
-
-    }
-
-    private class Answer{
-        String name;
-        int[] days;
-    }
 
     private static int binarySearch(MaxFlow.Node[] nodes, int lower, int upper, int source, int sink, int raStart, int raEnd, int days){
-        MaxFlow mf = new MaxFlow(); // = new MaxFlow(source,sink, nodes);
-        int maxSinkCap = upper*2; //uppeR=)days
+        MaxFlow mf = new MaxFlow();
         int ans = -1;
 
         while (lower <= upper){
             int capacity = lower + (upper-lower) /2;
-            resetRaCapacities(nodes,0,days-1,2); //dag end
-            resetRaCapacities(nodes,raStart,raEnd,1);//ra dag
-            resetRaCapacities(nodes,source,source,capacity);//ra dag
-
-            //mf = new MaxFlow();
+            resetAllCapacities(nodes,source, raStart, raEnd, days, capacity);
             mf.manualEdmondKarp(source,sink,nodes);
 
             if (mf.maxFlow == 2L *days){
@@ -67,13 +55,11 @@ public class RaDutyScheduler {
             }else {
                 lower = capacity+1;
             }
-
         }
-
         return ans;
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Kattio io = new Kattio();
 
         int nbrOfRAs = io.getInt();
@@ -101,8 +87,8 @@ public class RaDutyScheduler {
             String[] words = line.split(" ");
             nodes[i] = new MaxFlow.Node(i,words[0]);
             EdgeInit(nodes,source, i,capacity);
-///////////ha koll på minmax dagar här sen om för långsamt
-            for (int j = 1; j < words.length; j++) {
+
+            for (int j = 2; j < words.length; j++) {
                 int day = Integer.parseInt(words[j]);
                 EdgeInit(nodes, i, day-1, 1);
             }
@@ -110,12 +96,9 @@ public class RaDutyScheduler {
         }
 
 
-        //MaxFlow mf = binarySearch(nodes,1,days,source,sink, raStart, raEnd);
         int bin = binarySearch(nodes,1,days,source,sink, raStart, raEnd, days);
-        //System.out.println(bin);
-        resetRaCapacities(nodes,0,days-1,2); //dag end
-        resetRaCapacities(nodes,raStart,raEnd,1);//ra dag
-        resetRaCapacities(nodes,source,source,bin);//ra dag
+        io.println(bin);
+        resetAllCapacities(nodes,source, raStart, raEnd, days, bin);
         MaxFlow mf = new MaxFlow();
         mf.manualEdmondKarp(source,sink,nodes);
 
@@ -123,11 +106,9 @@ public class RaDutyScheduler {
         for (int i = 0; i < days; i++) {
             MaxFlow.Node node = nodes[i];
             io.print("Day " + node.ID + ": ");
-            LinkedList<String> list = new LinkedList<>();
             for (MaxFlow.Edge edge : node.edges) {
                 if (!edge.forward){
                     if (edge.residualCapacity>0){
-                     //   list.add(edge.to.name);
                         io.print(edge.to.name + " ");
                     }
                 }
@@ -137,7 +118,5 @@ public class RaDutyScheduler {
 
         io.flush();
         io.close();
-      //  System.out.println(mf.maxFlow);
-
     }
 }
