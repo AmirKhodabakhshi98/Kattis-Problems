@@ -116,7 +116,16 @@ public class MaxFlow {
         int ID = -1;
         boolean visited = false;
         boolean left;
+        String name;
 
+
+        //for RA problem
+        Node(int ID, String name){
+            this.ID = ID;
+            this.name = name;
+        }
+
+        //for paintball prbolem
         Node(int ID, boolean left){
             this.ID = ID;
             this.left = left;
