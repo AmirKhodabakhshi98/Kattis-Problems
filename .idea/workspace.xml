@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ETE389/KingOfTheNorth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ETE389/MaxFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/MaxFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/RaDutyScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/RaDutyScheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,61 +29,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="6.550807726821933E-35" />
-      <entry key="MS500" value="2.5344354134547727E-7" />
-      <entry key="S2" value="0.037734868530399555" />
-      <entry key="S5" value="0.41571813480132186" />
-      <entry key="S10" value="1.0505187057541396" />
-      <entry key="S30" value="2.9372192129195893" />
-      <entry key="S60" value="5.278544647217811" />
-      <entry key="M2" value="8.621932319708803" />
-      <entry key="M5" value="15.34669685600174" />
-      <entry key="M10" value="28.107669693549894" />
-      <entry key="M15" value="44.08372318234003" />
-      <entry key="M30" value="96.92915481737958" />
-      <entry key="H1" value="172.53602289304285" />
-      <entry key="H2" value="241.8775927553638" />
-      <entry key="H4" value="289.84200383333825" />
-      <entry key="D1" value="338.99230610489946" />
-      <entry key="W1" value="348.401447931748" />
+      <entry key="MS100" value="1.0000000000062037" />
+      <entry key="MS500" value="1.0057349980622123" />
+      <entry key="S2" value="1.2959538425404173" />
+      <entry key="S5" value="1.915672111598907" />
+      <entry key="S10" value="2.586159370690285" />
+      <entry key="S30" value="3.731655914502322" />
+      <entry key="S60" value="5.143142362470269" />
+      <entry key="M2" value="8.12022838823082" />
+      <entry key="M5" value="14.098561326660288" />
+      <entry key="M10" value="23.754340660983758" />
+      <entry key="M15" value="36.74126799229158" />
+      <entry key="M30" value="82.91564694453389" />
+      <entry key="H1" value="171.20934881144754" />
+      <entry key="H2" value="308.77440487239187" />
+      <entry key="H4" value="459.8655037269458" />
+      <entry key="D1" value="683.3294691963076" />
+      <entry key="W1" value="735.7529761703323" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0004493448482759" />
-      <entry key="S2" value="1.1592176423754461" />
-      <entry key="S5" value="1.642020939954502" />
-      <entry key="S10" value="2.1039962374100485" />
-      <entry key="S30" value="2.77477099786581" />
-      <entry key="S60" value="3.5437039830068944" />
-      <entry key="M2" value="4.719626777456739" />
-      <entry key="M5" value="8.131436906954518" />
-      <entry key="M10" value="15.354067095269626" />
-      <entry key="M15" value="22.77079942036708" />
-      <entry key="M30" value="42.908433031545385" />
-      <entry key="H1" value="69.00311643242405" />
-      <entry key="H2" value="92.2268569731985" />
-      <entry key="H4" value="108.13644435076496" />
-      <entry key="D1" value="124.37064854428196" />
-      <entry key="W1" value="127.47305981121059" />
+      <entry key="MS100" value="3.6946168540089885E-8" />
+      <entry key="MS500" value="0.03262376935019927" />
+      <entry key="S2" value="0.46262582852651063" />
+      <entry key="S5" value="1.063348123285667" />
+      <entry key="S10" value="1.6565857356411209" />
+      <entry key="S30" value="2.464445996018146" />
+      <entry key="S60" value="3.283450613787238" />
+      <entry key="M2" value="5.179878448922122" />
+      <entry key="M5" value="9.14815651589161" />
+      <entry key="M10" value="15.30130776110349" />
+      <entry key="M15" value="23.26868975613801" />
+      <entry key="M30" value="49.42348746548371" />
+      <entry key="H1" value="92.31016387538799" />
+      <entry key="H2" value="149.9153046695218" />
+      <entry key="H4" value="208.45312825191036" />
+      <entry key="D1" value="291.4955122551507" />
+      <entry key="W1" value="310.63403929197176" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0034005881378754853" />
-      <entry key="MS500" value="0.320964004144656" />
-      <entry key="S2" value="0.9006085735951047" />
-      <entry key="S5" value="1.860787262048977" />
-      <entry key="S10" value="3.016502242070716" />
-      <entry key="S30" value="5.64172358676368" />
-      <entry key="S60" value="8.773872869307517" />
-      <entry key="M2" value="13.307074233139742" />
-      <entry key="M5" value="23.447627312283966" />
-      <entry key="M10" value="43.42607161282105" />
-      <entry key="M15" value="66.81673672362074" />
-      <entry key="M30" value="139.79989267173937" />
-      <entry key="H1" value="241.50820994943348" />
-      <entry key="H2" value="334.0836298786056" />
-      <entry key="H4" value="397.9662076279823" />
-      <entry key="D1" value="463.36060362535966" />
-      <entry key="W1" value="475.87416339962937" />
+      <entry key="MS100" value="0.07536298923814884" />
+      <entry key="MS500" value="0.6060256659771831" />
+      <entry key="S2" value="1.4347850569418146" />
+      <entry key="S5" value="2.6530262143054433" />
+      <entry key="S10" value="3.9625915277769708" />
+      <entry key="S30" value="6.038892332603516" />
+      <entry key="S60" value="8.319478821964454" />
+      <entry key="M2" value="13.219662607140949" />
+      <entry key="M5" value="23.193154401555383" />
+      <entry key="M10" value="39.01258444427857" />
+      <entry key="M15" value="59.96789246537453" />
+      <entry key="M30" value="132.29650012691573" />
+      <entry key="H1" value="263.47993085403505" />
+      <entry key="H2" value="458.6571980219126" />
+      <entry key="H4" value="668.2957991454771" />
+      <entry key="D1" value="974.8196081864006" />
+      <entry key="W1" value="1046.3861960743232" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -106,6 +106,7 @@
     "Application.Ecoin (1).executor": "Run",
     "Application.Ecoin.executor": "Run",
     "Application.ExchangeRates.executor": "Run",
+    "Application.KingOfTheNorth.executor": "Run",
     "Application.Ljutna.executor": "Run",
     "Application.MSTPrim.executor": "Debug",
     "Application.MaxFlow.executor": "Run",
@@ -149,13 +150,13 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RaDutyScheduler">
-    <configuration name="ExchangeRates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE388.Dynamic.ExchangeRates" />
+  <component name="RunManager" selected="Application.KingOfTheNorth">
+    <configuration name="KingOfTheNorth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.KingOfTheNorth" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ETE388.Dynamic.*" />
+          <option name="PATTERN" value="ETE389.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -217,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KingOfTheNorth" />
         <item itemvalue="Application.RaDutyScheduler" />
         <item itemvalue="Application.Paintball" />
         <item itemvalue="Application.MaxFlow" />
         <item itemvalue="Application.MSTPrim" />
-        <item itemvalue="Application.ExchangeRates" />
       </list>
     </recent_temporary>
   </component>
@@ -287,8 +288,32 @@
           <line>113</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE389/KingOfTheNorth.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE389/MaxFlow.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ETE389/MaxFlow.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="ETE389.MaxFlow$Node" memberName="edges" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="letterValue" language="JAVA" />

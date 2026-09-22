@@ -18,6 +18,7 @@ public class MaxFlow {
         this.nodes = nodes;
         this.from = nodes[from];
         this.to = nodes[to];
+        System.err.println(from + " -> " + to);
 
 
         edmondKarp();
@@ -54,10 +55,14 @@ public class MaxFlow {
                 Edge e = current.parentEdge;
                 e.residualCapacity-=bottleneck;
                 e.reverseEdge.residualCapacity+=bottleneck;
+                if (e.reverseEdge.residualCapacity<0){
+                 //   e.reverseEdge.residualCapacity= Integer.MAX_VALUE;
+                }
                 current = current.parent;
                 pathEdges.add(e);
             }
             maxFlow += bottleneck;
+ //           System.err.println(maxFlow);
         }
     }
 
@@ -133,6 +138,22 @@ public class MaxFlow {
         boolean left;
         String name;
 
+
+        //for kiong of the north
+        boolean isCastle = false;
+        int vertexCapacity = 0;
+        boolean isFakeNode = false;
+
+        Node(boolean isFakeNode, int vertexCapacity){
+            this.isFakeNode = isFakeNode;
+            this.vertexCapacity = vertexCapacity;
+        }
+        Node(boolean isFakeNode){
+            this.isFakeNode = isFakeNode;
+        }
+
+
+        Node(){}
 
         //for RA problem
         Node(int ID, String name){
