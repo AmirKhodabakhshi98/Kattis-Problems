@@ -11,9 +11,14 @@ public class KingOfTheNorth {
     private static void initEdgesAllDirections(MaxFlow.Node[][] orig, MaxFlow.Node[][] fake){
         for (int r = 0; r < orig.length; r++) {
             for (int c = 0; c < orig[0].length; c++) {
+
+                if (orig[r][c].vertexCapacity==0){
+                    continue;
+                }
+
                 edgeInit(orig[r][c], fake[r][c], orig[r][c].vertexCapacity);//INNRE
 
-                if (orig[r][c].vertexCapacity==0 || orig[r][c].isCastle){
+                if (orig[r][c].isCastle){
                     continue;
                 }
 
