@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef553360-5faa-4fe7-8292-3d43857839b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ETE389/ExcavatorExpedition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/KingOfTheNorth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/KingOfTheNorth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETE389/MaxFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETE389/MaxFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,61 +28,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000002021296" />
-      <entry key="S2" value="1.0037705743159053" />
-      <entry key="S5" value="1.107290928068762" />
-      <entry key="S10" value="1.327552939339272" />
-      <entry key="S30" value="1.6895451024830148" />
-      <entry key="S60" value="1.862143702230119" />
-      <entry key="M2" value="2.420591732852375" />
-      <entry key="M5" value="6.075648773460635" />
-      <entry key="M10" value="13.881592295667815" />
-      <entry key="M15" value="23.394751063185566" />
-      <entry key="M30" value="60.846194970547" />
-      <entry key="H1" value="143.99523276625567" />
-      <entry key="H2" value="284.08692120065325" />
-      <entry key="H4" value="445.8749866642557" />
-      <entry key="D1" value="695.4398277826951" />
-      <entry key="W1" value="755.3793205765234" />
+      <entry key="MS100" value="1.000000743069248" />
+      <entry key="MS500" value="1.0594573922707382" />
+      <entry key="S2" value="1.4939714942997822" />
+      <entry key="S5" value="1.789752747317558" />
+      <entry key="S10" value="2.1614521430591775" />
+      <entry key="S30" value="3.5311570453906365" />
+      <entry key="S60" value="4.499320648520536" />
+      <entry key="M2" value="5.913375589413842" />
+      <entry key="M5" value="15.497980406526644" />
+      <entry key="M10" value="33.32935425185576" />
+      <entry key="M15" value="48.48806362977807" />
+      <entry key="M30" value="90.09889273521388" />
+      <entry key="H1" value="172.25291097757966" />
+      <entry key="H2" value="322.812705884748" />
+      <entry key="H4" value="521.8383297824341" />
+      <entry key="D1" value="875.2502753722969" />
+      <entry key="W1" value="967.4031056977092" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="7.289574941618081E-197" />
-      <entry key="S2" value="9.240076169953578E-50" />
-      <entry key="S5" value="2.4340491707050258E-20" />
-      <entry key="S10" value="1.5906465485328594E-10" />
-      <entry key="S30" value="8.508363624243833E-4" />
-      <entry key="S60" value="0.05853354999296633" />
-      <entry key="M2" value="0.5933715105803248" />
-      <entry key="M5" value="3.216742480366724" />
-      <entry key="M10" value="7.962187516962864" />
-      <entry key="M15" value="13.682347539332682" />
-      <entry key="M30" value="35.29411310854637" />
-      <entry key="H1" value="77.47561263000375" />
-      <entry key="H2" value="138.74928196251895" />
-      <entry key="H4" value="203.57955834824077" />
-      <entry key="D1" value="298.6982886807838" />
-      <entry key="W1" value="321.05328869870556" />
+      <entry key="MS100" value="1.4691346636660088E-70" />
+      <entry key="MS500" value="1.0799715855587634E-14" />
+      <entry key="S2" value="3.286120962850779E-4" />
+      <entry key="S5" value="0.05885215806905831" />
+      <entry key="S10" value="0.5127510824358901" />
+      <entry key="S30" value="2.783207630105756" />
+      <entry key="S60" value="4.389279538200158" />
+      <entry key="M2" value="5.704046055587488" />
+      <entry key="M5" value="10.05155054409521" />
+      <entry key="M10" value="18.42261816219414" />
+      <entry key="M15" value="25.635545115622744" />
+      <entry key="M30" value="45.58755533434581" />
+      <entry key="H1" value="86.00806040394247" />
+      <entry key="H2" value="156.04592828970786" />
+      <entry key="H4" value="241.79187146587205" />
+      <entry key="D1" value="385.1589713886901" />
+      <entry key="W1" value="421.48990067216903" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="6.398405292277163E-4" />
-      <entry key="MS500" value="0.22972822088291378" />
-      <entry key="S2" value="0.6942190854930849" />
-      <entry key="S5" value="0.9448587512498413" />
-      <entry key="S10" value="1.214821434916061" />
-      <entry key="S30" value="1.635465835950226" />
-      <entry key="S60" value="1.888876353518035" />
-      <entry key="M2" value="2.9922079309520258" />
-      <entry key="M5" value="9.271793257194588" />
-      <entry key="M10" value="21.821229422892213" />
-      <entry key="M15" value="37.052090675117356" />
-      <entry key="M30" value="96.10946611993946" />
-      <entry key="H1" value="221.43740297751347" />
-      <entry key="H2" value="422.8060266438103" />
-      <entry key="H4" value="649.4322143906122" />
-      <entry key="D1" value="994.1326071229848" />
-      <entry key="W1" value="1076.431761981882" />
+      <entry key="MS100" value="0.020053555059920295" />
+      <entry key="MS500" value="0.48781890247730075" />
+      <entry key="S2" value="1.2399135741209395" />
+      <entry key="S5" value="1.7105867203051754" />
+      <entry key="S10" value="2.5475258216112504" />
+      <entry key="S30" value="6.186011695491952" />
+      <entry key="S60" value="8.79473270087292" />
+      <entry key="M2" value="11.557467143047884" />
+      <entry key="M5" value="25.50405841566243" />
+      <entry key="M10" value="51.70769888786182" />
+      <entry key="M15" value="74.08100703577294" />
+      <entry key="M30" value="135.64563248031433" />
+      <entry key="H1" value="258.22101741486557" />
+      <entry key="H2" value="478.82235463360365" />
+      <entry key="H4" value="763.6022248986683" />
+      <entry key="D1" value="1260.4018545251718" />
+      <entry key="W1" value="1388.8918516101146" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -97,51 +96,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BlockCrusher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BlockCrusherNodes.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ChopWood (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.ChopWood.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Ecoin (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Ecoin.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExchangeRates.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KingOfTheNorth.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Ljutna.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MSTPrim.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.MaxFlow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Paintball.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Paintings.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PortoStatic.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RaDutyScheduler.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SSP.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/A/Documents/GitHub/Kattis-Problems/src/TDDD95&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BlockCrusher.executor": "Run",
+    "Application.BlockCrusherNodes.executor": "Run",
+    "Application.ChopWood (1).executor": "Run",
+    "Application.ChopWood.executor": "Run",
+    "Application.Ecoin (1).executor": "Run",
+    "Application.Ecoin.executor": "Run",
+    "Application.ExcavatorExpedition (1).executor": "Run",
+    "Application.ExcavatorExpedition.executor": "Run",
+    "Application.ExchangeRates.executor": "Run",
+    "Application.KingOfTheNorth.executor": "Run",
+    "Application.Ljutna.executor": "Run",
+    "Application.MSTPrim.executor": "Debug",
+    "Application.MaxFlow.executor": "Run",
+    "Application.Paintball.executor": "Run",
+    "Application.Paintings.executor": "Run",
+    "Application.PortoStatic.executor": "Run",
+    "Application.RaDutyScheduler.executor": "Run",
+    "Application.SSP.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/A/Documents/GitHub/Kattis-Problems/src/TDDD95",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editing.templates",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\A\Documents\GitHub\Kattis-Problems\src\TDDD95" />
@@ -150,35 +151,35 @@
       <recent name="ETE389" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KingOfTheNorth">
+  <component name="RunManager" selected="Application.ExcavatorExpedition">
+    <configuration name="ExcavatorExpedition (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.ExcavatorExpedition" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExcavatorExpedition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ETE389.ExcavatorExpedition" />
+      <module name="Kattis-Problems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETE389.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KingOfTheNorth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ETE389.KingOfTheNorth" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE389.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MSTPrim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE389.MSTPrim" />
-      <module name="Kattis-Problems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ETE389.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaxFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ETE389.MaxFlow" />
       <module name="Kattis-Problems" />
       <extension name="coverage">
         <pattern>
@@ -218,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExcavatorExpedition" />
+        <item itemvalue="Application.ExcavatorExpedition (1)" />
         <item itemvalue="Application.KingOfTheNorth" />
         <item itemvalue="Application.RaDutyScheduler" />
         <item itemvalue="Application.Paintball" />
-        <item itemvalue="Application.MaxFlow" />
-        <item itemvalue="Application.MSTPrim" />
       </list>
     </recent_temporary>
   </component>
